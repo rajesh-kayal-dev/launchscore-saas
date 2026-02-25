@@ -1,0 +1,41 @@
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="8" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glow Layer (Green Base Stroke) -->
+  <path
+    d="M100 60h-15a4 4 0 0 0-3.8 2.8l-6 20a1 1 0 0 1-2 0L60 35a1 1 0 0 0-2 0l-6 20A4 4 0 0 1 48 60H20"
+    stroke="#10b981"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    filter="url(#neonGlow)"
+    opacity="0.6"
+  />
+
+  <!-- Core White Stroke -->
+  <path
+    d="M100 60h-15a4 4 0 0 0-3.8 2.8l-6 20a1 1 0 0 1-2 0L60 35a1 1 0 0 0-2 0l-6 20A4 4 0 0 1 48 60H20"
+    stroke="#ffffff"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+</svg>
