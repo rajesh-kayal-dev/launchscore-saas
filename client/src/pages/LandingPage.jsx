@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import { 
-  Zap, 
-  Search, 
-  Shield, 
-  Eye, 
-  Mic, 
-  Bell, 
+import {
+  Zap,
+  Search,
+  Shield,
+  Eye,
+  Mic,
+  Bell,
   ArrowRight,
   Globe,
   BarChart3,
@@ -15,7 +15,7 @@ import {
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
-import  IntroSequence  from '../components/IntroSequence';
+import IntroSequence from '../components/IntroSequence';
 
 const features = [
   {
@@ -103,7 +103,7 @@ const LandingPage = () => {
     <div className="min-h-screen bg-[#0f0f0f] text-white overflow-hidden">
       {/* Grid Background Effect */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      
+
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="container mx-auto px-6 pt-20 pb-32">
@@ -123,7 +123,7 @@ const LandingPage = () => {
             </h1>
 
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Get simple, actionable insights about your website's performance, SEO, and security. 
+              Get simple, actionable insights about your website's performance, SEO, and security.
               No technical knowledge required.
             </p>
 
@@ -220,7 +220,7 @@ const LandingPage = () => {
                   {index < steps.length - 1 && (
                     <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-emerald-500/50 to-transparent" />
                   )}
-                  
+
                   <div className="relative">
                     <div className="w-32 h-32 mx-auto rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 flex items-center justify-center mb-6">
                       <step.icon className="w-12 h-12 text-emerald-400" />
@@ -229,7 +229,7 @@ const LandingPage = () => {
                       {step.number}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
                   <p className="text-gray-400">{step.description}</p>
                 </motion.div>
@@ -266,7 +266,10 @@ const LandingPage = () => {
         {/* Footer */}
         <footer className="container mx-auto px-6 py-12 border-t border-white/5">
           <div className="text-center text-gray-500">
-            <p>&copy; 2026 LaunchScore. Built for non-technical website owners.</p>
+            <p>
+              &copy; {new Date().getFullYear()} LaunchScore. Built with 💚 by Rajesh
+            </p>
+            <p className="text-sm mt-2">Built for non-technical website owners.</p>
           </div>
         </footer>
       </div>
