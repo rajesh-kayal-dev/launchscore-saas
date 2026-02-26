@@ -1,7 +1,7 @@
 
 import { Bell, User, Activity } from 'lucide-react';
-import { Badge } from '../ui/badge';
-import { useNavigate } from 'react-router';
+import { Badge } from '../components/ui/badge';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const navigate = useNavigate();
