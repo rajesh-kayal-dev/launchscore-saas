@@ -22,6 +22,7 @@ import ScanResultPage from "../pages/app/ScanResultPage";
 import APIHealthPage from "../pages/app/APIHealthPage";
 import FeedbackPage from "../pages/app/FeedbackPage";
 import ProfilePage from "../pages/app/ProfilePage";
+import SingleReportPage from "../pages/app/SingleReportPage";
 
 const AppRoutes = () => {
   return (
@@ -55,6 +56,7 @@ const AppRoutes = () => {
           <Route path="/app/api-health" element={<APIHealthPage />} />
           <Route path="/app/feedback" element={<FeedbackPage />} />
           <Route path="/app/profile" element={<ProfilePage />} />
+          <Route path="/app/report/:id" element={<SingleReportPage />} />
         </Route>
 
         {/* FALLBACK */}

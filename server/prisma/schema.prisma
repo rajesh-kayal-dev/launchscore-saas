@@ -5,6 +5,7 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model User {
@@ -17,6 +18,7 @@ model User {
   updatedAt DateTime @updatedAt
 
   websites  Website[]
+  scans Scan[]
 }
 
 model Website {
@@ -24,6 +26,18 @@ model Website {
   url       String
   name      String?
   userId    String
-  user      User     @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scans     Scan[]
+  createdAt DateTime @default(now())
+}
+
+model Scan {
+  id        String   @id @default(uuid())
+  url       String
+  score     Int
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  websiteId String?
+  website   Website? @relation(fields: [websiteId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
 }
